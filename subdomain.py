@@ -22,4 +22,4 @@ for link in soup.find_all("a", href=True):
 
 print("Subdomains:")
 for subdomain in subdomains:
-    print(subdomain)
+    print("https://" + subdomain + "." + main_domain)
