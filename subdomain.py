@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-main_domain = "umsida.ac.id"
+main_domain = "YOUR_DOMAIN"
 response = requests.get(f"https://{main_domain}")
 
 soup = BeautifulSoup(response.content, "html.parser")
