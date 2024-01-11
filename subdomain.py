@@ -1,7 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 
-main_domain = "YOUR_DOMAIN"
+main_domain = input("Enter the main domain (e.g., example.com): ")
+
+while not main_domain:
+    print("Main domain cannot be empty.")
+    main_domain = input("Enter the main domain (e.g., example.com): ")
+
 response = requests.get(f"https://{main_domain}")
 
 soup = BeautifulSoup(response.content, "html.parser")
